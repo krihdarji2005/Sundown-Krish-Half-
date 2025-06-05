@@ -1,0 +1,237 @@
+@font-face {
+    font-family: NeueHaasDisplay;
+    src: url(./fonts/NeueHaasDisplayMediu.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NeueHaasDisplay';
+   
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "GitRoy", sans-serif;
+}
+
+/*parent is main */
+#page1 {
+    min-height: 100vh;
+    /* width: 100vw; */
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav {
+    padding: 2vw 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+}
+
+#nav-part2 h4 {
+    padding: 0.5vw 1.2vw;
+    border: 1px solid rgb(6, 6, 6);
+    border-radius: 100px;
+    font-weight: 600;
+    color: #000000bd;
+    font-size: 0.9vw;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    left: 0;
+
+    bottom: -100%;
+    border-radius: 30px;
+    transition: all ease 0.3s;
+    z-index: 0;
+}
+
+#nav-part2 h4:hover::after {
+    bottom: 0;
+}
+
+#nav-part2 h4 a {
+    text-decoration: none;
+    color: #000000bd;
+    z-index: 9;
+    position: relative;
+    font-weight: 600;
+
+}
+
+#nav-part2 h4:hover a {
+    color: white;
+
+}
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: rgb(255, 140, 0); */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000bd;
+    padding-bottom: 2.5vw;
+  
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+
+}
+#center h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+   
+}
+#page1 video{
+    position: relative;
+    width: 100%;
+    margin-top: 5vw;
+    border-radius: 30px;
+    /* overflow-x: hidden; */
+    z-index: 2;
+}
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: #FE320A;
+    /* border-radius: 50%; */
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    right: 0;
+    top: 68vh;
+    filter: blur(20px);
+   
+
+}
+#hero-1{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    
+    border-radius: 50%;
+ 
+    filter: blur(20px); 
+    position: absolute;
+    animation: anime-1 3s linear 0s infinite alternate;
+
+}
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A,#fe3b0a);
+    
+    border-radius: 50%;
+
+    filter: blur(15px); 
+    position: absolute;
+    animation: anime-2 5s linear 0s infinite alternate;
+}
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A,#fe5f0a);
+    
+    border-radius: 50%;
+    
+    filter: blur(25px); 
+    position: absolute;
+    animation: anime-1 5s linear 0s infinite alternate;
+
+
+}
+@keyframes anime-1 {
+    from{
+        transform: translate(55%,-5%);
+                             /*left ,right: */
+    }
+    to{
+        transform: translate(0%,10%);
+
+    }
+    
+}
+@keyframes anime-2 {
+    from{
+        transform: translate(5%,-5%);
+                             /*left ,right: */
+    }
+    to{
+        transform: translate(-20%,30%);
+
+    }
+    
+}
+
+#page2{
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    width: 100%;
+    padding: 8vw 0;
+
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+#moving-text h1{
+    font-size: 9vw;
+
+    display: inline-block;    
+
+}
+.con{
+   white-space: nowrap;/*child will come in single line*/
+   display: inline-block;
+   animation: move 10s linear 0s infinite ;
+   
+}
+#orangeball{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;    
+    margin: 2vw 2vw;
+
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
